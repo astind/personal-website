@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { BaseComponent } from './main/components/base/base.component';
 import { HomeComponent } from './main/components/home/home.component';
 import { PageNotFoundComponent } from './main/components/page-not-found/page-not-found.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './main/modules/material/material.module';
+import { AboutComponent } from './main/components/about/about.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     BaseComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

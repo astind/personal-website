@@ -1,3 +1,17 @@
-<h2>Welcome to the Website</h2>
+<div class="base">
+    <mat-toolbar>
+        <a class="title" mat-button routerLink="/home">Dillon Astin</a>
+        <span class="spacer"></span>
 
-<router-outlet></router-outlet>
+        <a mat-button routerLink="/about">About</a>
+        <a mat-button routerLink="/portfolio">Portfolio</a>
+        <a mat-button routerLink="/resume">Resume</a>
+        
+        <a href="https://github.com/astind">
+            <fa-icon class="icon" [icon]="faGitHub"></fa-icon>
+        </a>
+    </mat-toolbar>
+    <div class="body">
+        <router-outlet></router-outlet>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+.base {
+    width: 100%;
+    height: 100%;
+    background-color: #e8e8e8;
+}
+
+.spacer {
+    flex: 1 1 auto;
+}
+
+.body {
+    padding: 10px;
+}
+
+.title {
+    font-size: 20px;
+}
+
+.icon {
+    color: black;
+    font-size: 30px;
+}
+
+.mat-toolbar {
+    background: #75a3a3;
+}
+
+a {
+    margin: 0 10px;
+}
