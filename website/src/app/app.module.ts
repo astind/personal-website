@@ -9,7 +9,7 @@ import { PageNotFoundComponent } from './main/components/page-not-found/page-not
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './main/modules/material/material.module';
 import { AboutComponent } from './main/components/about/about.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SharedModule } from './main/modules/shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -17,14 +17,14 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BaseComponent,
     HomeComponent,
     PageNotFoundComponent,
-    AboutComponent
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    FontAwesomeModule
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,37 @@
+<div class="box col">
+  <div>
+    <h2>Card Game!</h2>
+  </div>
+  <div class="box row">
+
+    <!--Game Info-->
+    <div class="row grow">
+      <div class="col">
+        
+       <div class="row opt">
+         <div class="tag">Room Code:</div>
+         <div><input type="text" [(ngModel)]="roomCode"></div>
+       </div>
+
+       <div class="row center">
+        <button mat-flat-button [disabled]="!roomCode">Join Game</button>
+       </div>
+
+       <div class="row opt center">
+         <button mat-flat-button color="primary" (click)="createGame()">Create Game</button>
+       </div>
+      </div>
+    </div>
+
+    <!--Player Info-->
+    <div class="col grow">
+      <div class="row">
+        <div class="tag">Player Name:</div>
+        <div>
+          <input type="text" [(ngModel)]="player.name">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
