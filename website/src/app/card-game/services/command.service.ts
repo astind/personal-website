@@ -10,7 +10,9 @@ export class CommandService {
   private serverUrl = "ws://localhost:8122";
   private connection: WebSocketSubject<any> | null = null;
 
-  constructor() { }
+  constructor() {
+    console.log('hello');
+   }
 
 
   connect(): Observable<any> {

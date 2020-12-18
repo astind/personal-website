@@ -14,7 +14,7 @@
        </div>
 
        <div class="row center">
-        <button mat-flat-button [disabled]="!roomCode">Join Game</button>
+        <button mat-flat-button [disabled]="!roomCode" (click)="joinGame()">Join Game</button>
        </div>
 
        <div class="row opt center">
@@ -28,7 +28,7 @@
       <div class="row">
         <div class="tag">Player Name:</div>
         <div>
-          <input type="text" [(ngModel)]="player.name">
+          <input type="text" [(ngModel)]="playerName">
         </div>
       </div>
       <div class="row">

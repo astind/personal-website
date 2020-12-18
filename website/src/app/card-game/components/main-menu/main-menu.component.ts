@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Player } from '../../models/player';
 import { CommandService } from '../../services/command.service';
 
 @Component({
@@ -10,15 +9,14 @@ import { CommandService } from '../../services/command.service';
 })
 export class MainMenuComponent implements OnInit {
 
-  player: Player;
-
+  playerName: string;
   roomCode: string = "";
 
   constructor(
     private router: Router,
     private commands: CommandService
     ) {
-    this.player = this.loadPlayer();
+    this.playerName = this.loadPlayerName();
    }
 
   ngOnInit(): void {
@@ -35,17 +33,18 @@ export class MainMenuComponent implements OnInit {
     );
   }
 
-  loadPlayer(): Player {
-    let savedPlayer = localStorage.getItem("cg-saved-player");
+
+  loadPlayerName(): string {
+    let savedPlayer = localStorage.getItem("cg-saved-name");
     if (savedPlayer === null) {
-      return new Player("test");
+      return "";
     } else {
-      return JSON.parse(savedPlayer) as Player;
+      return savedPlayer;
     }
   }
 
   savePlayer() {
-    localStorage.setItem('cg-saved-player', JSON.stringify(this.player));
+    localStorage.setItem('cg-saved-name', this.playerName);
   }
 
   createGame() {
@@ -61,6 +60,7 @@ export class MainMenuComponent implements OnInit {
 
   joinGame() {
     // save the player data to local storage
+    this.savePlayer();
     this.router.navigate([`card-game/lobby/${this.roomCode}`]);
   }
 

@@ -9,4 +9,11 @@
   <div>
     <div>Room Code: {{gameId}}</div>
   </div>
+
+  <div>
+    Players:
+    <div *ngFor="let player of players">
+      {{ player }}
+    </div>
+  </div>
 </div>
