@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 import { webSocket, WebSocketSubject } from 'rxjs/webSocket';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'any'
 })
 export class CommandService {
 
@@ -11,7 +11,7 @@ export class CommandService {
   private connection: WebSocketSubject<any> | null = null;
 
   constructor() {
-    console.log('hello');
+    console.log('new instance');
    }
 
 

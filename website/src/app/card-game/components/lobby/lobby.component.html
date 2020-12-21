@@ -1,19 +1,25 @@
-<div>
+<div class="box col">
   <div>Lobby</div>
   <!--Game options that can be set if host-->
-  <div *ngIf="ifHost">
-
+  <div *ngIf="isHost" class="box row">
+    <div class="col">
+      <div>Game Settings</div>
+    </div>
+    <div class="col">
+      <div>Start Game</div>
+      <button mat-raised-button [disabled]="players.length < 6">Start Game</button>
+    </div>
   </div>
 
   <!--Default Game lobby stuff-->
-  <div>
+  <div class="row">
     <div>Room Code: {{gameId}}</div>
   </div>
 
-  <div>
-    Players:
+  <div class="col">
+    <div>Players:</div>
     <div *ngFor="let player of players">
-      {{ player }}
+      {{ player.name }}
     </div>
   </div>
 </div>
